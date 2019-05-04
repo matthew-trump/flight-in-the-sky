@@ -1,0 +1,107 @@
+@import '../../styles-common/mixins.scss';
+@import '../../styles-common/variables.scss';
+
+.TrackerSoldOutMessage {
+  background-color: #f8f8f8;
+  background-image: url(/assets/interstitial-bg-bottom.jpg);
+  background-repeat: no-repeat;
+  background-position: center 106%;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.TrackerSoldOutMessage--end {
+  background-image: url(/assets/interstitial-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.TrackerSoldOutMessage-logoPie {
+  display: block;
+  height: 45px;
+  left: 35px;
+  position: absolute;
+  top: 35px;
+  width: auto;
+}
+
+.TrackerSoldOutMessage-logoPostmates {
+  display: block;
+  height: 44px;
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  width: auto;
+}
+
+.TrackerSoldOutMessage-regionTop {
+  display: flex;
+  flex-basis: 50vh;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 35px 0;
+}
+
+.TrackerSoldOutMessage-headline {
+  @include font-size(36);
+  color: $color-red;
+  line-height: 1.5;
+  padding: 8vh 0 15px;
+  text-transform: uppercase;
+}
+
+.TrackerSoldOutMessage-subhead {
+  @include font-size(14);
+  color: $color-red;
+  line-height: 1.3;
+  padding: 0 0 5px;
+  text-transform: uppercase;
+}
+
+.TrackerSoldOutMessage-message {
+  @include font-size(14);
+  color: $color-blue;
+  display: block;
+  line-height: 1.3;
+  margin: 0 auto;
+  text-transform: uppercase;
+
+  &.TrackerSoldOutMessage-message--narrow {
+    max-width: 240px;
+  }
+}
+
+.TrackerSoldOutMessage-regionBottom {
+  align-items: center;
+  background: url(/assets/plane.png) no-repeat 0 40%;
+  background-size: 88% auto;
+  display: flex;
+  flex-basis: 50vh;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 35px 35px;
+}
+
+.TrackerSoldOutMessage-ribbon {
+  display: block;
+  height: auto;
+  margin: 8vh 0 0;
+  width: 160px;
+}
+
+.TrackerSoldOutMessage-footerMessage {
+  @include font-size(7);
+  bottom: 35px;
+  color: #656565;
+  line-height: 1.5;
+  left: 0;
+  max-width: 80%;
+  padding: 0 45px;
+  position: absolute;
+  right: 0;
+  text-align: left;
+}

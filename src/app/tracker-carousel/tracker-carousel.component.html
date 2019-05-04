@@ -1,0 +1,50 @@
+<div class="TrackerCarousel-wrap">
+  <ul class="TrackerCarousel" *ngIf="state">
+    <li *ngFor="let image of images"
+      [ngClass]="{'TrackerCarousel-item--active' : image.active, 'TrackerCarousel-item': true}"
+      class="TrackerCarousel-item-{{transition}}" (panend)="panEnd($event)">
+      <img src="{{image.src}}">
+
+      <div *ngIf="image.isEnrouteMap"
+        class="TrackerCarousel-planeWrapper TrackerCarousel-planeWrapper--step{{state.substage}}">
+        <img src="assets/slides-full/plane.png" class="TrackerCarousel-plane">
+        <img src="assets/slides-full/sonar.png" class="TrackerCarousel-sonar">
+      </div>
+
+      <div *ngIf="image.isEnrouteMap" class="TrackerCarousel-beaconWrap">
+        <span class="TrackerCarousel-beaconMain">
+          <span class="TrackerCarousel-beaconRing"></span>
+        </span>
+        <span class="TrackerCarousel-beaconTitle">
+          Live
+        </span>
+      </div>
+
+      <div *ngIf="image.isEnrouteMap && state.enroute" class="TrackerCarousel-dataWrap">
+        <div class="TrackerCarousel-data">
+          <span class="TrackerCarousel-dataContent">
+            <span class="TrackerCarousel-dataTitle">Altitude</span>
+            <span class="TrackerCarousel-dataAmount">{{state.enroute.altitude *100 }} feet</span>
+          </span>
+          <span class="TrackerCarousel-dataIcon">
+            <img src="assets/altitude-icon.svg" alt="Airplane altitude" class="TrackerCarousel-dataImg">
+          </span>
+        </div>
+        <div class="TrackerCarousel-data">
+          <span class="TrackerCarousel-dataContent">
+            <span class="TrackerCarousel-dataTitle">Current speed</span>
+            <span class="TrackerCarousel-dataAmount">{{state.enroute.groundspeed *1.15 | number:'1.0-0' }} MPH</span>
+          </span>
+          <span class="TrackerCarousel-dataIcon">
+            <img src="assets/speed-icon.svg" alt="Airplane speed" class="TrackerCarousel-dataImg">
+          </span>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul *ngIf="images.length > 1 && !!pagination" class="TrackerCarousel-pagination">
+    <li *ngFor="let image of images"
+      [ngClass]="{'TrackerCarousel-page--active' : image.active, 'TrackerCarousel-page': true}">
+    </li>
+  </ul>
+</div>

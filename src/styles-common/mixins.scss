@@ -1,0 +1,14 @@
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src:  url($file-name + '.woff2') format('woff2'),
+          url($file-name + '.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin font-size($size-value: 16) {
+  font-size: ($size-value * 1) + px;
+  font-size: ($size-value / 16) + rem;
+}

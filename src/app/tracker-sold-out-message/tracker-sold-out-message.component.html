@@ -1,0 +1,19 @@
+<div [ngClass]="{'TrackerSoldOutMessage--end' : eventIsOver, 'TrackerSoldOutMessage': true}">
+  <img src="assets/pie-in-the-sky-base-logo.png" alt="Pie in the Sky logo" class="TrackerSoldOutMessage-logoPie">
+  <img *ngIf="eventIsOver" src="assets/postmates-bike-logo.svg" alt="Postmates logo"
+    class="TrackerSoldOutMessage-logoPostmates">
+
+  <div class="TrackerSoldOutMessage-regionTop">
+    <h3 class="TrackerSoldOutMessage-headline">{{messages.headline}}</h3>
+    <p class="TrackerSoldOutMessage-subhead">{{messages.subhead}}</p>
+    <p [ngClass]="{'TrackerSoldOutMessage-message--narrow' : eventIsOver, 'TrackerSoldOutMessage-message': true}">
+      {{messages.message}}
+    </p>
+  </div>
+
+  <div class="TrackerSoldOutMessage-regionBottom">
+    <img *ngIf="eventIsOver" src="assets/thanks-ribbon.png" alt="Thanks" class="TrackerSoldOutMessage-ribbon">
+    <p *ngIf="eventIsOver" class="TrackerSoldOutMessage-footerMessage">{{messages.footer.line1}}<br />
+      {{messages.footer.line2}}</p>
+  </div>
+</div>

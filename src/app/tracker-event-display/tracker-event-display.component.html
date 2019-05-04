@@ -1,0 +1,37 @@
+<div class="TrackerEventCountdown-wrap" *ngIf="state | async as state">
+
+  <div class="TrackerEventCountdown-header">
+    <app-tracker-carousel [event]="event" *ngIf="state.components.carousel"></app-tracker-carousel>
+  </div>
+
+  <div class="TrackerEventCountdown-detail" *ngIf="state.components.carousel">
+    <div class="TrackerEventCountdown-detailLogo">
+      <img src="{{display.detailLogo.src}}" alt="{{display.detailLogo.alt}}">
+    </div>
+    <h3 class="TrackerEventCountdown-detailHeadline">
+      {{display.messages.detailHeadline}}
+    </h3>
+  </div>
+
+  <div class="TrackerEventCountdown-countdown" *ngIf="state.components.clock">
+    <h4 class="TrackerEventCountdown-countdownHeadline">
+      {{display.messages.countdownHeadline}}
+    </h4>
+
+    <app-tracker-countdown-clock [event]="event"></app-tracker-countdown-clock>
+  </div>
+
+  <app-tracker-sold-out-message [event]="event" [flightIndex]="state.flightIndex" *ngIf="state.components.soldout">
+  </app-tracker-sold-out-message>
+
+  <div class="TrackerEventCountdown-list">
+    <app-tracker-message-list [event]="event" *ngIf="state.components.messages"></app-tracker-message-list>
+    <app-tracker-menu [event]="event" *ngIf="state.components.menu" class="TrackerEventCountdown-menu">
+    </app-tracker-menu>
+
+    <div *ngIf="state.components.messages" class="TrackerEventCountdown-legal">
+      <p class="TrackerEventCountdown-legalP">Demand will be high and pizza is not guaranteed.<br /> See blog for
+        details.</p>
+    </div>
+  </div>
+</div>

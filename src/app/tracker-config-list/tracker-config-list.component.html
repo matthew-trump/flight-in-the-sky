@@ -1,0 +1,13 @@
+<div>
+  <h3>Events</h3>
+  <ul>
+    <li *ngFor="let event of events">
+      <ul>
+        <li><span class="eventId"><a [routerLink]="['/config/event/' + event.id ]"
+              [queryParams]="{debug: true}">{{event.id}} <span class="theme">({{event.theme}})</span></a></span></li>
+        <li class="flighttime">{{event.flights[0].departure}}</li>
+        <li class="flighttime">{{event.flights[event.flights.length-1].arrival}}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

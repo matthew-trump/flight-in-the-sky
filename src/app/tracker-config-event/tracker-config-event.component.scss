@@ -1,0 +1,38 @@
+div{
+	margin-left: 3em;
+	margin-top: 1em;
+}
+ul{
+	list-style-type: none;
+}
+h2{
+	color: dodgerblue;
+}
+h3{
+	margin-top: 1.0em;
+	margin-bottom: 1.0em;
+}
+
+.flight li.flightnumber{
+	color: #333;
+	padding-left: 1.0em;
+}
+.flight li.flighttime{
+	padding-left: 2.0em;
+	color: #999;
+}
+ul.timekey{
+	margin-bottom: 0.5em;
+}
+ul.timekey li{
+	display: inline-block;
+}
+li.stageparam{
+	width: 10em;
+}
+li.simulatedtime{
+	color: #999;
+}
+a{ 
+	color: darkblue;
+}

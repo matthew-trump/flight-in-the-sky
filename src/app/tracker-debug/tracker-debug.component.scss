@@ -1,0 +1,31 @@
+div{
+	color: blue;
+	text-align: left;
+	font-size: 0.9em;
+}
+h3{
+	font-size: 0.9em;
+}
+
+h3 label{
+	display: inline-block;
+	width: 6em;
+	color: #999;
+}
+h2 label{
+
+}
+
+ul.enroute{
+	
+	color: #333;
+}
+ul.enroute label{
+	display: inline-block;
+	width: 7em;
+	color: #999;
+}
+
+ul.enroute label.enroute{
+	color: #633;
+}

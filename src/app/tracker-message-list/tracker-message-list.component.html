@@ -1,0 +1,8 @@
+<ul class="TrackerMessageList">
+  <li *ngFor="let message of messages" [ngClass]="{
+      'TrackerMessageList-item': true,
+      'TrackerMessageList-itemActive': message.active
+    }">
+    {{message.message}}
+  </li>
+</ul>

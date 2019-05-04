@@ -1,0 +1,72 @@
+<div class="TrackerCountdown">
+
+  <div [ngClass]="{
+    'TrackerCountdown-group': true,
+    'TrackerCountdown-group_closed': !fields.days1
+  }">
+    <span *ngIf="fields.days1" class="TrackerCountdown-digit">{{countdown.days1}}</span>
+    <span class="TrackerCountdown-title">Days</span>
+  </div>
+
+  <div [ngClass]="{
+    'TrackerCountdown-group': true,
+    'TrackerCountdown-group_closed': !fields.days2
+  }">
+    <span *ngIf="fields.days2" class="TrackerCountdown-digit">{{countdown.days2}}</span>
+    <span class="TrackerCountdown-title">Days</span>
+  </div>
+
+  <span class="TrackerCountdown-sep"></span>
+
+  <div [ngClass]="{
+    'TrackerCountdown-group': true,
+    'TrackerCountdown-group_closed': !fields.hours1
+  }">
+    <span *ngIf="fields.hours1" class="TrackerCountdown-digit">{{countdown.hours1}}</span>
+    <span class="TrackerCountdown-title">Hrs</span>
+  </div>
+
+  <div [ngClass]="{
+    'TrackerCountdown-group': true,
+    'TrackerCountdown-group_closed': !fields.hours2
+  }">
+    <span *ngIf="fields.hours2" class="TrackerCountdown-digit">{{countdown.hours2}}</span>
+    <span class="TrackerCountdown-title">Hrs</span>
+  </div>
+
+  <span class="TrackerCountdown-sep"></span>
+
+  <div [ngClass]="{
+    'TrackerCountdown-group': true,
+    'TrackerCountdown-group_closed': !fields.minutes1
+  }">
+    <span *ngIf="fields.minutes1" class="TrackerCountdown-digit">{{countdown.minutes1}}</span>
+    <span class="TrackerCountdown-title">Min</span>
+  </div>
+
+  <div [ngClass]="{
+    'TrackerCountdown-group': true,
+    'TrackerCountdown-group_closed': !fields.minutes2
+  }">
+    <span *ngIf="fields.minutes2" class="TrackerCountdown-digit">{{countdown.minutes2}}</span>
+    <span class="TrackerCountdown-title">Min</span>
+  </div>
+
+  <span class="TrackerCountdown-sep"></span>
+
+  <div [ngClass]="{
+    'TrackerCountdown-group': true,
+    'TrackerCountdown-group_closed': !fields.seconds1
+  }">
+    <span *ngIf="fields.seconds1" class="TrackerCountdown-digit">{{countdown.seconds1}}</span>
+    <span class="TrackerCountdown-title">Sec</span>
+  </div>
+
+  <div [ngClass]="{
+    'TrackerCountdown-group': true,
+    'TrackerCountdown-group_closed': !fields.seconds2
+  }">
+    <span *ngIf="fields.seconds2" class="TrackerCountdown-digit">{{countdown.seconds2}}</span>
+    <span class="TrackerCountdown-title">Sec</span>
+  </div>
+</div>

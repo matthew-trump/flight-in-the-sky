@@ -1,0 +1,11 @@
+<div class="TrackerMenu">
+  <h4 class="TrackerMenu-headline">{{menu.headline}}</h4>
+  <ul class="TrackerMenu-menu">
+    <li class="TrackerMenu-menuItem" *ngFor="let item of menu.items">
+      <span class="TrackerMenu-itemName">{{item.name}}</span>
+      <span class="TrackerMenu-itemPrice">{{item.price}}</span>
+    </li>
+  </ul>
+
+  <p class="TrackerMenu-promo">{{menu.promo.line1}}<br /> {{menu.promo.line2}}</p>
+</div>

@@ -1,0 +1,12 @@
+{
+    "newtest-123": {
+        "type": "extrapolated",
+        "flightNumber": "JBU123",
+        "dateBegin": "24 Apr 2019",
+        "dateEnd": "31 Jan 2020",
+        "timeScheduledDeparture": "07:10:00 GMT-0400",
+        "timeScheduledArrival": "10:15:00 GMT-0700",
+        "origin": "JFK",
+        "destination": "LAX"
+    }
+}

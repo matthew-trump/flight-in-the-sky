@@ -1,0 +1,31 @@
+<div *ngIf="event">
+  <h2>{{event.id}} (<a [routerLink]="['/tracker/' + event.id ]">show current</a>)</h2>
+
+  <h3>theme: {{event.config.theme}}</h3>
+  <h3>flights</h3>
+  <ul>
+    <li *ngFor="let flight of event.config.flights">
+      <ul class="flight">
+        <li class="flightnumber">{{flight.number}}</li>
+        <li class="flighttime">{{flight.departure}}</li>
+        <li class="flighttime">{{flight.arrival}}</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>test routes</h3>
+  <ul *ngIf="timeKeys">
+    <li *ngFor="let key of timeKeys">
+      <ul class="timekey">
+        <li class="stageparam">
+          <a [routerLink]="['/tracker/' + event.id ]" [queryParams]="{stage: key}">{{key}}</a>
+        </li>
+        <li class="simulatedtime">
+          {{event.config.testData.times[key] | date : 'medium'}}
+        </li>
+      </ul>
+
+    </li>
+  </ul>
+
+</div>

@@ -1,0 +1,306 @@
+{
+    "skypie": {
+        "application": {
+            "eventStateTimerDelay": 0,
+            "eventStateTimerInterval": 1000,
+            "preflightThreshold": 7200000,
+            "timeAfterArrivalUntilSoldOut": 1800000,
+            "timeShowingSoldOut": 7200000,
+            "carouselDelay": 10000,
+            "carouselInterval": 5000,
+            "carouselImageUpdateFrequency": 5,
+            "clockInterval": 1000,
+            "messageListDelay": 1000,
+            "messageListInterval": 1000,
+            "messageSubstitution": true
+        },
+        "components": {
+            "countdown": {
+                "clock": true,
+                "messages": false,
+                "menu": true,
+                "landed": false,
+                "soldout": false,
+                "carousel": true
+            },
+            "preflight": {
+                "clock": true,
+                "messages": true,
+                "menu": false,
+                "landed": false,
+                "soldout": false,
+                "carousel": true
+            },
+            "boarded": {
+                "clock": true,
+                "messages": true,
+                "menu": false,
+                "landed": false,
+                "soldout": false,
+                "carousel": true
+            },
+            "enroute": {
+                "clock": true,
+                "messages": true,
+                "menu": false,
+                "landed": false,
+                "soldout": false,
+                "carousel": true
+            },
+            "landed": {
+                "clock": true,
+                "messages": true,
+                "menu": false,
+                "landed": false,
+                "soldout": false,
+                "carousel": true
+            },
+            "soldout": {
+                "clock": false,
+                "messages": false,
+                "menu": false,
+                "landed": false,
+                "soldout": true,
+                "carousel": false
+            },
+            "recountdown": {
+                "clock": true,
+                "messages": false,
+                "menu": true,
+                "landed": false,
+                "soldout": false,
+                "carousel": true
+            },
+            "done": {
+                "clock": false,
+                "messages": false,
+                "menu": false,
+                "landed": false,
+                "soldout": true,
+                "carousel": false
+            }
+        },
+        "carousel": {
+            "countdown": {
+                "images": [
+                    "assets/slides-full/skypie-countdown-1.png",
+                    "assets/slides-full/skypie-countdown-2.png",
+                    "assets/slides-full/skypie-countdown-3.png",
+                    "assets/slides-full/skypie-countdown-4.png",
+                    "assets/slides-full/skypie-countdown-5.png",
+                    "assets/slides-full/skypie-countdown-6.png",
+                    "assets/slides-full/skypie-countdown-7.png"
+                ],
+                "transition": "normal",
+                "pagination": true
+            },
+            "preflight": {
+                "images": [
+                    "assets/slides-full/skypie-countdown-1.png",
+                    "assets/slides-full/skypie-countdown-2.png",
+                    "assets/slides-full/skypie-countdown-3.png",
+                    "assets/slides-full/skypie-countdown-4.png",
+                    "assets/slides-full/skypie-countdown-5.png",
+                    "assets/slides-full/skypie-countdown-6.png",
+                    "assets/slides-full/skypie-countdown-7.png"
+                ],
+                "transition": "normal",
+                "pagination": true
+            },
+            "boarded": {
+                "images": [
+                    "assets/slides-full/skypie-countdown-1.png",
+                    "assets/slides-full/skypie-countdown-2.png",
+                    "assets/slides-full/skypie-countdown-3.png",
+                    "assets/slides-full/skypie-countdown-4.png",
+                    "assets/slides-full/skypie-countdown-5.png",
+                    "assets/slides-full/skypie-countdown-6.png",
+                    "assets/slides-full/skypie-countdown-7.png"
+                ],
+                "transition": "normal",
+                "pagination": true
+            },
+            "enroute": {
+                "images": [
+                    {
+                        "src": "assets/slides-full/map.png",
+                        "countAs": 2,
+                        "isEnrouteMap": true
+                    },
+                    "assets/slides-full/skypie-countdown-1.png",
+                    "assets/slides-full/skypie-countdown-2.png",
+                    "assets/slides-full/skypie-countdown-3.png",
+                    "assets/slides-full/skypie-countdown-4.png",
+                    "assets/slides-full/skypie-countdown-5.png",
+                    "assets/slides-full/skypie-countdown-6.png",
+                    "assets/slides-full/skypie-countdown-7.png"
+                ],
+                "transition": "normal",
+                "pagination": true
+            },
+            "landed": {
+                "images": [
+                    "assets/slides-full/skypie-confirm.png",
+                    "assets/slides-full/skypie-confirm.png"
+                ],
+                "transition": "crossfade",
+                "pagination": false
+            },
+            "recountdown": {
+                "images": [
+                    "assets/slides-full/skypie-countdown-1.png",
+                    "assets/slides-full/skypie-countdown-2.png",
+                    "assets/slides-full/skypie-countdown-3.png",
+                    "assets/slides-full/skypie-countdown-4.png",
+                    "assets/slides-full/skypie-countdown-5.png",
+                    "assets/slides-full/skypie-countdown-6.png",
+                    "assets/slides-full/skypie-countdown-7.png"
+                ],
+                "transition": "normal",
+                "pagination": true
+            }
+        },
+        "enrouteSubstages": [
+            0.0,
+            0.25,
+            0.5,
+            0.75
+        ],
+        "display": {
+            "detailLogo": {
+                "src": "../../assets/pie-in-the-sky-logo.png",
+                "alt": "Pie in the Sky logo"
+            },
+            "messages": {
+                "detailHeadline": "Patsy's Pizzeria of East Harlem",
+                "countdownHeadline": "Order NY Pizza in"
+            }
+        },
+        "menu": {
+            "headline": "Menu",
+            "items": [
+                {
+                    "name": "Cheese",
+                    "price": "$12.00"
+                },
+                {
+                    "name": "Pepperoni",
+                    "price": "$15.00"
+                }
+            ],
+            "promo": {
+                "line1": "Demand will be high and pizza is not guaranteed.",
+                "line2": "See blog for details."
+            }
+        },
+        "messageListMessages": {
+            "preflight": [
+                {
+                    "timeRemaining": "24:00",
+                    "relativeTo": "nextDepartureTime",
+                    "message": "The pizza is being prepared at Patsy’s in NY"
+                },
+                {
+                    "timeRemaining": -1,
+                    "relativeTo": "nextDepartureTime",
+                    "message": "The pizza is boarding a JetBlue plane at JFK"
+                },
+                {
+                    "timeRemaining": -1,
+                    "message": "The pizza is soaring 30,000 feet in the air"
+                },
+                {
+                    "timeRemaining": -1,
+                    "message": "The pizza has landed at lax"
+                }
+            ],
+            "boarded": [
+                {
+                    "timeRemaining": "48:00",
+                    "relativeTo": "nextDepartureTime",
+                    "message": "The pizza is being prepared at Patsy’s in NY"
+                },
+                {
+                    "timeRemaining": "24:00",
+                    "relativeTo": "nextDepartureTime",
+                    "message": "The pizza is boarding a JetBlue plane at JFK"
+                },
+                {
+                    "timeRemaining": -1,
+                    "message": "The pizza is soaring 30,000 feet in the air"
+                },
+                {
+                    "timeRemaining": -1,
+                    "message": "The pizza has landed at lax"
+                }
+            ],
+            "enroute": [
+                {
+                    "complete": -1.0,
+                    "message": "The pizza is being prepared at Patsy’s in NY"
+                },
+                {
+                    "complete": -1.0,
+                    "message": "The pizza is boarding a JetBlue plane at JFK"
+                },
+                {
+                    "complete": 0.0,
+                    "message": "The pizza is soaring ALTITUDE_IN_FEET feet in the air",
+                    "substitute": true
+                },
+                {
+                    "complete": 1.5,
+                    "message": "The pizza has landed at lax"
+                }
+            ],
+            "landed": [
+                {
+                    "complete": -1.0,
+                    "message": "The pizza is being prepared at Patsy’s in NY"
+                },
+                {
+                    "complete": -1.0,
+                    "message": "The pizza is boarding a JetBlue plane at JFK"
+                },
+                {
+                    "complete": -1.0,
+                    "message": "The pizza is soaring 30,000 feet in the air"
+                },
+                {
+                    "complete": 1.0,
+                    "message": "The pizza has landed at lax"
+                }
+            ]
+        },
+        "soldout": {
+            "messages": [
+                {
+                    "headline": "Mamma Mia!",
+                    "subhead": "We're out of pizza.",
+                    "message": "Stay tuned, more pies will hit the sky tomorrow.",
+                    "footer": {
+                        "line1": "Demand will be high and pizza is not guaranteed.",
+                        "line2": "See blog for details."
+                    }
+                },
+                {
+                    "headline": "Mamma Mia!",
+                    "subhead": "We're out of pizza.",
+                    "message": "Still craving a slice? Let New York's hometown airline fly you there!",
+                    "footer": {
+                        "line1": "Demand will be high and pizza is not guaranteed.",
+                        "line2": "See blog for details."
+                    }
+                }
+            ]
+        },
+        "airports": {
+            "JFK": {
+                "location": "New York, NY"
+            },
+            "LAX": {
+                "location": "Los Angeles, CA"
+            }
+        }
+    }
+}

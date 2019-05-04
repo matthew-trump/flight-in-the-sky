@@ -1,0 +1,107 @@
+{
+    "countdown0": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -691200
+    },
+    "countdown1": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -604800
+    },
+    "countdown2": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -172800
+    },
+    "countdown3": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -86400
+    },
+    "countdown4": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -43200
+    },
+    "countdown5": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -21610
+    },
+    "countdown6": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -10800
+    },
+    "countdown7": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -7200
+    },
+    "countdown8": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -3600
+    },
+    "countdown9": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -60
+    },
+    "countdown10": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": -10
+    },
+    "boarding": {
+        "flightIndex": 0,
+        "field": "departure",
+        "adjust": 0
+    },
+    "about-to-land": {
+        "flightIndex": 0,
+        "field": "arrival",
+        "adjust": -10
+    },
+    "landed-one-minute-ago": {
+        "flightIndex": 0,
+        "field": "arrival",
+        "adjust": 60
+    },
+    "landed-half-hour-ago": {
+        "flightIndex": 0,
+        "field": "arrival",
+        "adjust": 1790
+    },
+    "soldout": {
+        "flightIndex": 0,
+        "field": "arrival",
+        "adjust": 1810
+    },
+    "recountdown0": {
+        "flightIndex": 1,
+        "field": "departure",
+        "adjust": -43200
+    },
+    "recountdown10": {
+        "flightIndex": 1,
+        "field": "departure",
+        "adjust": -21610
+    },
+    "after-last-flight-landed": {
+        "flightIndex": -1,
+        "field": "arrival",
+        "adjust": 1790
+    },
+    "after-last-flight-sold-out": {
+        "flightIndex": -1,
+        "field": "arrival",
+        "adjust": 9010
+    },
+    "done": {
+        "flightIndex": -1,
+        "field": "arrival",
+        "adjust": 86400
+    }
+}

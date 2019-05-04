@@ -1,0 +1,79 @@
+@import '../../styles-common/mixins.scss';
+@import '../../styles-common/variables.scss';
+
+.TrackerMenu {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+  padding: 25px 35px 35px;
+  width: 100%;
+}
+
+.TrackerMenu-headline {
+  @include font-size(28);
+  color: $color-red;
+  display: block;
+  font-family: 'Quote-Script', sans-serif;
+  padding: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.TrackerMenu-menu {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.TrackerMenu-menuItem {
+  @include font-size(14);
+  color: $color-blue;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  position: relative;
+  text-transform: uppercase;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:after {
+    border-bottom: 2px dotted $color-blue;
+    bottom: 3px;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.TrackerMenu-itemName {
+  background: #fff;
+  padding: 0 6px 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.TrackerMenu-itemPrice {
+  background: #fff;
+  padding: 0 0 0 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.TrackerMenu-promo {
+  @include font-size(7);
+  bottom: 35px;
+  left: 0;
+  text-align: left;
+  max-width: 80%;
+  position: absolute;
+  padding: 0 45px;
+  color: #656565;
+  line-height: 1.5;
+}

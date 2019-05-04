@@ -1,0 +1,22 @@
+html {
+  background: #fff;
+  font-size: 16px;
+}
+
+body {
+  @include font-size(16);
+  font-family: 'Futura-Bold', sans-serif;
+  color: $color-white;
+  line-height: 1;
+}
+
+html, body, button {
+  -webkit-font-smoothing: antialiased;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}

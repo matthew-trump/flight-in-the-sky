@@ -1,0 +1,50 @@
+<div *ngIf="state | async as state">
+
+  <h2><label>state</label> {{state.stage}} <span *ngIf="state.indeterminate">(indeterminate)</span> <span
+      *ngIf="state.stage==='enroute'"
+      style="font-size: 0.75em">{{event.config.flights[state.flightIndex].number}}</span></h2>
+  <h3 *ngIf="state.stage!=='enroute'"><label>curr. time</label> {{state.timeRequested | date : 'medium'}}</h3>
+  <h3 *ngIf="event.simulationOffset!=0"><label>sim. offset</label>
+    {{event.simulationOffset / (1000 * 3600 * 24)  | number}} days</h3>
+
+
+  <h3 *ngIf="state.stage!=='enroute'"><label>next arrival</label> {{state.arrivalTime | date : 'medium'}}</h3>
+
+  <ul class="enroute" *ngIf="state.stage==='enroute'">
+
+    <li style="margin-top: 0.3em;"> <label>departure</label> {{state.departureTime | date : 'mediumTime' }}</li>
+    <li> <label>takeoff</label> {{state.takeoffTime | date : 'mediumTime' }}</li>
+    <li style="color: darkblue;"><label>current time</label> {{state.timeRequested | date : 'mediumTime'}}</li>
+    <li> <label>landing (est.)</label> {{state.estimatedLandingTime | date : 'mediumTime'}}</li>
+
+
+    <li style="margin-top: 0.3em;"> <label>curr. flt. time</label> {{state.currentFlightTime / 3600000 | number }} hours
+    </li>
+    <li> <label>total flt. time</label> {{state.totalFlightTime / 3600000 | number }} hours</li>
+    <li> <label>completed</label> {{state.complete * 100 |number:'1.1-1'}}% <span
+        *ngIf="event.config.enrouteSubstages">substage: {{state.substage}}</span></li>
+
+
+    <li *ngIf="state.enroute" style="margin-top: 0.6em;"> <label class="enroute">altitude</label>
+      {{state.enroute.altitude *100 }} feet</li>
+    <li *ngIf="state.enroute"> <label class="enroute">groundspeed</label>
+      {{state.enroute.groundspeed *1.15 | number:'1.0-0' }} <span class="units">mph</span></li>
+    <li *ngIf="state.enroute"> <label class="enroute">heading</label> {{state.enroute.heading }}<span
+        class="units">&#176;</span> ({{direction}})</li>
+
+    <li *ngIf="state.enroute"> <label class="enroute">latitude</label> {{state.enroute.latitude }}<span
+        class="units"></span></li>
+    <li *ngIf="state.enroute"> <label class="enroute">(est.)</label>
+      {{state.enroute.latitudeextrapolated | number:'1.5-5'  }}<span class="units"></span></li>
+    <li *ngIf="state.enroute"> <label class="enroute">longitude</label> {{state.enroute.longitude }}<span
+        class="units"></span></li>
+
+
+    <li *ngIf="state.enroute"> <label class="enroute">(est.)</label>
+      {{state.enroute.longitudeextrapolated |  number:'1.5-5'  }}<span class="units"></span></li>
+
+
+
+  </ul>
+
+</div>

@@ -1,0 +1,4 @@
+<div *ngIf="event" class="TrackerEvent-wrap">
+  <app-tracker-debug [event]="event" *ngIf="debug"></app-tracker-debug>
+  <app-tracker-event-display [event]="event"></app-tracker-event-display>
+</div>
